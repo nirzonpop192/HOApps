@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:HO.Apps.Controls"
+                    xmlns:Converters="clr-namespace:HO.Apps.Converters"
+                    x:Class="HO.Apps.Themes.Default">
+
+  <!-- Color -->
+  <Color x:Key="BaseBackgroundColor">#FFFFFF</Color>
+  <Color x:Key="BaseColor">#000000</Color>
+  <Color x:Key="DefaultColor">#464545</Color>
+  <Color x:Key="PrimaryColor">#375a7f</Color>
+  <Color x:Key="WarningColor">#f39c12</Color>
+  <Color x:Key="DangerColor">#e74c3c</Color>
+  <Color x:Key="SuccessColor">#00bc8c</Color>
+  <Color x:Key="InfoColor">#3498db</Color>
+  <Color x:Key="WhiteColor">#FFFFFF</Color>
+  <Color x:Key="BlackColor">#000000</Color>
+  <Color x:Key="GrayColor">Gray</Color>
+  <Color x:Key="BlueColor">#0277bd</Color>
+  <Color x:Key="ActivityColor">#000000</Color>
+
+
+  <Color x:Key="orangeLight">#f76d45</Color>
+  <Color x:Key="orangePrimary">#FF5722</Color>
+  <Color x:Key="orangeDark">#E64A19</Color>
+
+  <Color x:Key="pinkLight">#EA3874</Color>
+  <Color x:Key="pinkPrimary">#E91E63</Color>
+  <Color x:Key="pinkDark">#9C0A3C</Color>
+
+  <Color x:Key="asphaltLight">#6D8491</Color>
+  <Color x:Key="asphaltPrimary">#5c7d90</Color>
+  <Color x:Key="asphaltDark">#233743</Color>
+
+  <Color x:Key="blueLight">#71E5FF</Color>
+  <Color x:Key="bluePrimary">#4FCAE6</Color>
+  <Color x:Key="blueDark">#258499</Color>
+
+  <Color x:Key="indigoLight">#5362B6</Color>
+  <Color x:Key="indigoPrimary">#3F51B5</Color>
+  <Color x:Key="indigoDark">#172468</Color>
+
+  <Color x:Key="tealLight">#7AD5C9</Color>
+  <Color x:Key="tealPrimary">#6AB9AF</Color>
+  <Color x:Key="tealDark">#457972</Color>
+
+  <Color x:Key="purpleLight">#A38FCE</Color>
+  <Color x:Key="purplePrimary">#9378CD</Color>
+  <Color x:Key="purpleDark">#533D80</Color>
+
+  <Color x:Key="greenLight">#9FE168</Color>
+  <Color x:Key="greenPrimary">#91E04F</Color>
+  <Color x:Key="greenDark">#579325</Color>
+
+  <Color x:Key="redLight">#FF866D</Color>
+  <Color x:Key="redPrimary">#F56D50</Color>
+  <Color x:Key="redDark">#A83D26</Color>
+
+  <Color x:Key="yellowLight">#FFE45C</Color>
+  <Color x:Key="yellowPrimary">#F5D740</Color>
+  <Color x:Key="yellowDark">#D1B941</Color>
+
+  <Color x:Key="grayUltraLight">#FFFFFF</Color>
+  <Color x:Key="grayLight">#F2F2F2</Color>
+  <Color x:Key="grayPrimary">#B9B9B9</Color>
+  <Color x:Key="grayDark">#959595</Color>
+  <Color x:Key="grayMedium">#B9B9B9</Color>
+
+
+  <Style x:Key="defaultActivity" TargetType="ActivityIndicator">
+    <Setter Property="Scale">
+      <Setter.Value>
+        <OnPlatform x:TypeArguments="x:Double" iOS="2" Android="1" />
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="ActivityIndicator" BasedOn="{StaticResource defaultActivity}" />
+
+  <Style x:Key="labelStyle" TargetType="Label">
+    <Setter Property="TextColor" Value="{StaticResource asphaltPrimary}" />
+    <Setter Property="FontSize">
+      <Setter.Value>
+        <OnPlatform x:TypeArguments="x:Double" iOS="14" Android="12" />
+      </Setter.Value>
+    </Setter>
+    <Setter Property="FontFamily" Value="SegoeUI" />
+  </Style>
+  <Style x:Key="header" TargetType="Label" BasedOn="{StaticResource labelStyle}">
+    <Setter Property="FontFamily" Value="SegoeUI" />
+    <Setter Property="TextColor" Value="{StaticResource grayLight}" />
+  </Style>
+  <Style TargetType="Label" BasedOn="{StaticResource labelStyle}" />
+  <Style x:Key="whiteLabelStyle" TargetType="Label" BasedOn="{StaticResource labelStyle}">
+    <Setter Property="TextColor" Value="#FFFFFF" />
+  </Style>
+  <Style x:Key="sub" TargetType="Label" BasedOn="{StaticResource labelStyle}">
+    <Setter Property="TextColor" Value="{StaticResource grayDark}" />
+    <Setter Property="FontSize" Value="Small" />
+  </Style>
+
+  <Style x:Key="buttonStyle" TargetType="Button">
+    <Setter Property="TextColor" Value="White" />
+    <Setter Property="BorderRadius" Value="4" />
+    <Setter Property="HeightRequest" Value="50" />
+    <Setter Property="FontSize" Value="Medium" />
+    <Setter Property="BackgroundColor" Value="{StaticResource grayDark}" />
+  </Style>
+  <Style TargetType="Button" BasedOn="{StaticResource buttonStyle}" />
+  <Style TargetType="local:HOButton" BasedOn="{StaticResource buttonStyle}" />
+  <Style x:Key="deleteButtonStyle" TargetType="Button" BasedOn="{StaticResource buttonStyle}">
+    <Setter Property="TextColor" Value="White" />
+    <Setter Property="BackgroundColor" Value="{StaticResource redPrimary}" />
+  </Style>
+
+  <Style x:Key="wizardButton" TargetType="local:HOButton" BasedOn="{StaticResource buttonStyle}">
+    <Setter Property="BackgroundColor" Value="#3FFF" />
+    <Setter Property="BorderColor" Value="#AFFF" />
+    <Setter Property="TextColor" Value="#CFFF" />
+    <Setter Property="BorderWidth" Value=".5" />
+  </Style>
+  <Style x:Key="HomeButton" 
+         TargetType="local:HOButton" 
+         BasedOn="{StaticResource wizardButton}">
+    <Setter Property="HeightRequest" Value="40" />
+    <Setter Property="WidthRequest" Value="50" />
+    <Setter Property="HorizontalOptions" Value="Start" />
+    <Setter Property="Image">
+      <Setter.Value>
+        <OnPlatform x:TypeArguments="FileImageSource">
+          <OnPlatform.iOS>Images/slideout.png</OnPlatform.iOS>
+          <OnPlatform.Android>slideout.png</OnPlatform.Android>
+          <OnPlatform.WinPhone>Images/slideout.png</OnPlatform.WinPhone>
+        </OnPlatform>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="OkButton"
+         TargetType="local:HOButton"
+         BasedOn="{StaticResource HomeButton}">
+    <Setter Property="Image">
+      <Setter.Value>
+        <OnPlatform x:TypeArguments="FileImageSource">
+          <OnPlatform.iOS>Images/ok_32.png</OnPlatform.iOS>
+          <OnPlatform.Android>ok_32.png</OnPlatform.Android>
+          <OnPlatform.WinPhone>Images/ok_32.png</OnPlatform.WinPhone>
+        </OnPlatform>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="CancelButton"
+       TargetType="local:HOButton"
+       BasedOn="{StaticResource HomeButton}">
+    <Setter Property="Image">
+      <Setter.Value>
+        <OnPlatform x:TypeArguments="FileImageSource">
+          <OnPlatform.iOS>Images/cancel_32.png</OnPlatform.iOS>
+          <OnPlatform.Android>cancel_32.png</OnPlatform.Android>
+          <OnPlatform.WinPhone>Images/cancel_32.png</OnPlatform.WinPhone>
+        </OnPlatform>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="NextButton"
+       TargetType="local:HOButton"
+       BasedOn="{StaticResource HomeButton}">
+    <Setter Property="Image">
+      <Setter.Value>
+        <OnPlatform x:TypeArguments="FileImageSource">
+          <OnPlatform.iOS>Images/right_32.png</OnPlatform.iOS>
+          <OnPlatform.Android>right_32.png</OnPlatform.Android>
+          <OnPlatform.WinPhone>Images/right_32.png</OnPlatform.WinPhone>
+        </OnPlatform>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+
+
+  <!-- Pages -->
+  <Color x:Key="PageBackgroundColor">#FFFFFF</Color>
+
+  <!-- Sidebar -->
+  <Color x:Key="SidebarBackgroundColor">#284B9C</Color>
+  <Color x:Key="SidebarSeparatorColor">White</Color>
+  <Color x:Key="SidebarColor">White</Color>
+  <Color x:Key="SidebarHeaderBackgroundColor">#3E1360</Color>
+  <Color x:Key="SidebarHeaderColor">White</Color>
+  <Color x:Key="SidebarFooterBackgroundColor">#284B9C</Color>
+
+
+  <!-- Button Border Width-->
+  <x:Double x:Key="NormarlBorderWidth">1</x:Double>
+  <x:Double x:Key="MediumBorderWidth">2</x:Double>
+  <x:Double x:Key="LargeBorderWidth">5</x:Double>
+
+  <!-- Button Border Radius -->
+  <x:Int32 x:Key="CircleButtonRadius">25</x:Int32>
+  <x:Int32 x:Key="SmallCircleButtonRadius">40</x:Int32>
+  <x:Int32 x:Key="MediumCircleButtonRadius">50</x:Int32>
+  <x:Int32 x:Key="LargeCircleButtonRadius">75</x:Int32>
+  <x:Int32 x:Key="RoundButtonRadius">10</x:Int32>
+
+
+  <!-- Button Height & Width -->
+  <x:Double x:Key="ButtonMinHeight">50</x:Double>
+  <x:Double x:Key="ButtonMinWidth">200</x:Double>
+  <x:Double x:Key="CircleButtonMinHeight">50</x:Double>
+  <x:Double x:Key="CircleButtonMinWidth">50</x:Double>
+  <x:Double x:Key="SmallCircleButton">80</x:Double>
+  <x:Double x:Key="MediumCircleButton">100</x:Double>
+  <x:Double x:Key="LargeCircleButton">150</x:Double>
+
+  <!-- Entry Height & Width-->
+  <x:Double x:Key="DefaultEntry">35</x:Double>
+  <x:Double x:Key="SmallEntry">30</x:Double>
+  <x:Double x:Key="MediumEntry">40</x:Double>
+  <x:Double x:Key="LargeEntry">50</x:Double>
+
+  <!-- FontSize -->
+  <x:Double x:Key="DefaultFontSize">16</x:Double>
+  <x:Double x:Key="SmallFontSize">15</x:Double>
+  <x:Double x:Key="MediumFontSize">20</x:Double>
+  <x:Double x:Key="LargeFontSize">25</x:Double>
+  <x:Double x:Key="XLargeFontSize">30</x:Double>
+
+  <!-- MISC. -->
+  <x:Double x:Key="CellRowHeight">250</x:Double>
+  <x:Double x:Key="DefaultSpacing">10</x:Double>
+  <!-- Label -->
+  <Style x:Key="Control-Label" TargetType="Label">
+    <Setter Property="HorizontalOptions" Value="Start" />
+    <Setter Property="TextColor" Value="{StaticResource BlackColor}"/>
+    <Setter Property="Margin" Value="0,0,0,5" />
+    <Setter Property="FontAttributes" Value="Bold"/>
+    <Setter Property="HorizontalTextAlignment" Value="Start" />
+    <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+  </Style>
+  <Style x:Key="ApplicationTitle" BasedOn="{StaticResource Control-Label}" TargetType="Label">
+    <Setter Property="FontSize" Value="{StaticResource XLargeFontSize}"/>
+    <Setter Property="TextColor" Value="{StaticResource BlackColor}"/>
+  </Style>
+  <Style x:Key="Alert-Label" BasedOn="{StaticResource Control-Label}" TargetType="Label">
+    <Setter Property="Margin" Value="0" />
+  </Style>
+
+  <!-- Entry -->
+  <Style x:Key="Form-Control" TargetType="Entry">
+    <Setter Property="BackgroundColor" Value="Transparent" />
+    <Setter Property="TextColor" Value="{StaticResource BlackColor}"/>
+    <Setter Property="PlaceholderColor" Value="{StaticResource GrayColor}" />
+    <Setter Property="VerticalOptions" Value="Center"/>
+  </Style>
+  <Style x:Key="Form-Control-Small" BasedOn="{StaticResource Form-Control}" TargetType="Entry">
+    <Setter Property="FontSize" Value="{StaticResource SmallFontSize}"/>
+    <Setter Property="HeightRequest" Value="{StaticResource SmallEntry}"/>
+  </Style>
+  <Style x:Key="Form-Control-Medium" BasedOn="{StaticResource Form-Control}" TargetType="Entry">
+    <Setter Property="FontSize" Value="{StaticResource MediumFontSize}"/>
+    <Setter Property="HeightRequest" Value="{StaticResource MediumEntry}"/>
+  </Style>
+  <Style x:Key="Form-Control-Large" BasedOn="{StaticResource Form-Control}" TargetType="Entry">
+    <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>
+    <Setter Property="HeightRequest" Value="{StaticResource LargeEntry}"/>
+  </Style>
+  <Style x:Key="Picker-Control" TargetType="Picker">
+    <Setter Property="TextColor" Value="{StaticResource GrayColor}"/>
+  </Style>
+  <!-- Base Button -->
+  <Style x:Key="Button" TargetType="Button">
+    <Setter Property="HorizontalOptions" Value="Start"/>
+    <Setter Property="VerticalOptions" Value="Start" />
+    <Setter Property="BorderWidth" Value="{StaticResource NormarlBorderWidth}" />
+    <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}"/>
+    <Setter Property="HeightRequest" Value="{StaticResource ButtonMinHeight}"/>
+    <Setter Property="WidthRequest" Value="{StaticResource ButtonMinWidth}"/>
+  </Style>
+
+  <!-- Flat Buttons-->
+  <Style x:Key="Default-Button" BasedOn="{StaticResource Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource DefaultColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+    <Setter Property="BorderColor" Value="{StaticResource DefaultColor}"/>
+  </Style>
+  <Style x:Key="Primary-Button" BasedOn="{StaticResource Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+    <Setter Property="BorderColor" Value="{StaticResource PrimaryColor}"/>
+  </Style>
+  <Style x:Key="Success-Button" BasedOn="{StaticResource Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource SuccessColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+    <Setter Property="BorderColor" Value="{StaticResource SuccessColor}"/>
+  </Style>
+  <Style x:Key="Info-Button" BasedOn="{StaticResource Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource InfoColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+    <Setter Property="BorderColor" Value="{StaticResource InfoColor}"/>
+  </Style>
+  <Style x:Key="Warning-Button" BasedOn="{StaticResource Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource WarningColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+    <Setter Property="BorderColor" Value="{StaticResource WarningColor}"/>
+  </Style>
+  <Style x:Key="Danger-Button" BasedOn="{StaticResource Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource DangerColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+    <Setter Property="BorderColor" Value="{StaticResource DangerColor}"/>
+  </Style>
+
+  <!-- Circle Buttons -->
+  <Style x:Key="Circle-Button" TargetType="Button" BasedOn="{StaticResource Button}">
+    <Setter Property="BorderRadius" Value="{StaticResource CircleButtonRadius}"/>
+  </Style>
+
+  <Style x:Key="Default-Circle-Button" TargetType="Button" BasedOn="{StaticResource Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource DefaultColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Primary-Circle-Button" TargetType="Button" BasedOn="{StaticResource Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Warning-Circle-Button" TargetType="Button" BasedOn="{StaticResource Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource WarningColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Danger-Circle-Button" TargetType="Button" BasedOn="{StaticResource Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource DangerColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Success-Circle-Button" TargetType="Button" BasedOn="{StaticResource Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource SuccessColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Info-Circle-Button" TargetType="Button" BasedOn="{StaticResource Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource InfoColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <!-- Semi  Circle Buttons-->
+  <Style x:Key="Semi-Circle-Button" TargetType="Button" BasedOn="{StaticResource Circle-Button}">
+    <Setter Property="BorderRadius" Value="{StaticResource CircleButtonRadius}"/>
+  </Style>
+  <Style x:Key="Default-Semi-Circle-Button" TargetType="Button" BasedOn="{StaticResource Semi-Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource DefaultColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Primary-Semi-Circle-Button" TargetType="Button" BasedOn="{StaticResource Semi-Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Warning-Semi-Circle-Button" TargetType="Button" BasedOn="{StaticResource Semi-Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource WarningColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Danger-Semi-Circle-Button" TargetType="Button" BasedOn="{StaticResource Semi-Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource DangerColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Success-Semi-Circle-Button" TargetType="Button" BasedOn="{StaticResource Semi-Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource SuccessColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Info-Semi-Circle-Button" TargetType="Button" BasedOn="{StaticResource Semi-Circle-Button}">
+    <Setter Property="BackgroundColor" Value="{StaticResource InfoColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <!-- Rounded Buttons-->
+  <Style x:Key="Rounded-Button" BasedOn="{StaticResource Circle-Button}" TargetType="Button">
+    <Setter Property="BorderRadius" Value="{StaticResource RoundButtonRadius}"/>
+  </Style>
+
+  <Style x:Key="Default-Rounded-Button" BasedOn="{StaticResource Rounded-Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource DefaultColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Primary-Rounded-Button" BasedOn="{StaticResource Rounded-Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Warning-Rounded-Button" BasedOn="{StaticResource Rounded-Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource WarningColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Danger-Rounded-Button" BasedOn="{StaticResource Rounded-Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource DangerColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Success-Rounded-Button" BasedOn="{StaticResource Rounded-Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource SuccessColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <Style x:Key="Info-Rounded-Button" BasedOn="{StaticResource Rounded-Button}" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource InfoColor}"/>
+    <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+  </Style>
+
+  <!-- Alert Message -->
+  <Style x:Key="Alert" TargetType="StackLayout">
+    <Setter Property="Padding" Value="15"/>
+    <Setter Property="Margin" Value="0,0,0,20"/>
+  </Style>
+  <Style x:Key="Alert-Info" BasedOn="{StaticResource Alert}" TargetType="StackLayout">
+    <Setter Property="BackgroundColor" Value="{StaticResource InfoColor}" />
+  </Style>
+  <Style x:Key="Alert-Success" BasedOn="{StaticResource Alert}" TargetType="StackLayout">
+    <Setter Property="BackgroundColor" Value="{StaticResource SuccessColor}" />
+  </Style>
+  <Style x:Key="Alert-Warning" BasedOn="{StaticResource Alert}" TargetType="StackLayout">
+    <Setter Property="BackgroundColor" Value="{StaticResource WarningColor}" />
+  </Style>
+  <Style x:Key="Alert-Danger" BasedOn="{StaticResource Alert}" TargetType="StackLayout">
+    <Setter Property="BackgroundColor" Value="{StaticResource DangerColor}" />
+  </Style>
+
+  <!-- Converters -->
+  <Converters:InverseBooleanConverter x:Key="boolInverter" />
+  <Converters:DoubleToIntegerConverter x:Key="DoubleToInteger"/>
+  <Converters:BoolToLabelOpacityConverter x:Key="BoolToLabelOpactity"/>
+</ResourceDictionary>

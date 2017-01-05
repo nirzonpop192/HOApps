@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Views:NonPersistentSelectedItemListView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Views="clr-namespace:HO.Apps.Views"
+    xmlns:Controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+    xmlns:Converters="clr-namespace:HO.Apps.Converters"
+    x:Class="HO.Apps.Views.DigitalID.milkDigitalIDListView"
+    RowHeight="300"
+    SeparatorColor="{DynamicResource WhiteColor}">
+    <Views:NonPersistentSelectedItemListView.Resources>
+        <ResourceDictionary>
+            <Converters:ImageSourceConverter x:Key="ImageSourceConverter" />
+        </ResourceDictionary>
+    </Views:NonPersistentSelectedItemListView.Resources>
+    <Views:NonPersistentSelectedItemListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell StyleId="disclosure" 
+                      Appearing="ViewCell_Appearing">
+                <StackLayout Spacing="{DynamicResource DefaultSpacing}"
+                             Padding="20"
+                     BackgroundColor="{DynamicResource BlueColor}">
+                    <StackLayout Spacing="5">
+                        <Controls:CircleImage BorderColor="White"
+                                              BorderThickness="5"
+                                              VerticalOptions="End"
+                                              Source="{Binding PortraitView, Converter={StaticResource ImageSourceConverter}}"
+                                              HorizontalOptions="CenterAndExpand"
+                                              WidthRequest="200"
+                                              HeightRequest="200"/>
+                        <Label Text="{Binding NickName}"
+                               FontSize="{DynamicResource LargeFontSize}"
+                               TextColor="{DynamicResource WhiteColor}"
+                               HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+    </Views:NonPersistentSelectedItemListView.ItemTemplate>
+</Views:NonPersistentSelectedItemListView>

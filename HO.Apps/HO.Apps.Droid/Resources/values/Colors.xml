@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <color name="ColorPrimary">#2196F3</color>
+  <color name="ColorPrimaryDark">#1976D2</color>
+  <color name="accent">#E040FB</color>
+  <color name="Color_red">#DA2825</color>
+  <color name="Color_yellow">#F7B405</color>
+  <color name="Color_Highlight_text">#008843</color>
+  <color name="list_item_color1">#4692aa</color>
+  <color name="list_item_color2">#62a2b7</color>
+  <color name="color_action_bar">#4692aa</color>
+  <color name="color_white">#FFFFFF</color>
+  <color name="color_log_bg">#324065</color>
+
+
+
+  <color name ="sapphireBlue">#324065</color>
+  <color name ="navyBlue">#0168B3</color>
+  <color name ="bondiBlue">#00AAAD</color>
+  <color name ="irisBlue">#00ACDE</color>
+  
+  <!--THEME COLOR-->
+ 
+    <color name="my_blue">#3498DB</color>
+    <color name="my_green">#77D065</color>
+    <color name="my_purple">#B455B6</color>
+    <color name="my_gray">#738182</color>
+</resources>

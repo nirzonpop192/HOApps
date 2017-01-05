@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<resources>
+   
+    <dimen name="hilight_textview_width">220.5dp</dimen>
+<!--  padding-->
+    <dimen name="padding_5dp">5dp</dimen>
+    <dimen name="ball_radius">30dp</dimen>
+    <dimen name="font_size">16sp</dimen>
+</resources>

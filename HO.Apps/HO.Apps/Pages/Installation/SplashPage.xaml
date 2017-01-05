@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Converters="clr-namespace:HO.Apps.Converters"
+             x:Class="HO.Apps.Pages.Installation.SplashPage"
+             BackgroundColor="Transparent">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Converters:ImageSourceConverter x:Key="ImageSourceConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <!--<StackLayout HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand">
+        <Image x:Name="ImageContent" 
+           Source="{Binding Name}" 
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="CenterAndExpand">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+                    Command="{Binding TapCommand}"
+                    NumberOfTapsRequired="1" />
+            </Image.GestureRecognizers>
+        </Image>
+        <Button x:Name="DismissButton"
+            Clicked="DismissButton_Clicked"
+            Text="Click here to dismiss"
+            Style="{DynamicResource Danger-Button}"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"/>
+    </StackLayout>-->
+  <AbsoluteLayout>
+    <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,0,1,.8"
+                    AbsoluteLayout.LayoutFlags="All"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Padding="0,50,0,0">
+      <Image x:Name="SplashImage" Source="{Binding Name, Converter={StaticResource ImageSourceConverter}}}"
+             HorizontalOptions="CenterAndExpand"
+             VerticalOptions="CenterAndExpand"
+             AbsoluteLayout.LayoutBounds=".5,.5,1,1"
+             AbsoluteLayout.LayoutFlags="All">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding TapCommand}"
+                                NumberOfTapsRequired="1" />
+        </Image.GestureRecognizers>
+      </Image>
+    </AbsoluteLayout>
+    <AbsoluteLayout  AbsoluteLayout.LayoutBounds="0,1,1,.2"
+                     AbsoluteLayout.LayoutFlags="All"
+                     HorizontalOptions="Center">
+      <StackLayout Orientation="Horizontal"
+                   BindingContext="{x:Reference SplashImage}"
+                   WidthRequest="{Binding Width, Mode=TwoWay}">
+        <ProgressBar x:Name="ProgressInitilize"
+                     Progress="0.5"
+                     IsEnabled="True"
+                     IsVisible="True"
+                     BackgroundColor="Navy"/>
+        <Label Text="Click image to continue"
+               TextColor="Red"
+               HorizontalOptions="Start"
+               Style="{DynamicResource Control-Label}"/>
+      </StackLayout>
+
+    </AbsoluteLayout>
+
+  </AbsoluteLayout>
+</ContentPage>

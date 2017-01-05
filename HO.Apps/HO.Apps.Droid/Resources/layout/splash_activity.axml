@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="15dp"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <ImageView
+        android:src="@drawable/window_page_not_found_error_256"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgv_splash_screen"
+        android:layout_gravity="center" />
+    <TextView
+        android:background="@color/background_floating_material_light"
+        android:textColor="@color/Color_red"
+        android:textSize="15sp"
+        android:text="@string/Str_toContinue"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_splash_press" />
+</LinearLayout>

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HO.Apps.Pages.TestPage"
+             xmlns:local="clr-namespace:HO.Apps.Controls"
+             Title="Test Page">
+
+  <ScrollView>
+    <StackLayout Padding="10">
+      <Image x:Name="ImageName" />
+      <local:HOEntry Placeholder="No Entry"/>
+      <local:HOEntry x:Name="EntryName"
+             Style="{DynamicResource Form-Control}"
+             Placeholder="Default Entry"/>
+
+      <local:HOEntry Style="{DynamicResource Form-Control-Small}"
+             Placeholder="Small Entry"/>
+
+      <local:HOEntry Style="{DynamicResource Form-Control-Medium}"
+             Placeholder="Medium Entry"/>
+
+      <local:HOEntry Style="{DynamicResource Form-Control-Large}"
+             Placeholder="Large Entry"/>
+      <Label x:Name="LabelMessage"/>
+
+      <Label Text="Small Full Circle Button" Style="{DynamicResource ApplicationTitle}"/>
+      <StackLayout Orientation="Horizontal">
+        <Button Style="{DynamicResource Default-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource SmallCircleButtonRadius}"
+                    HeightRequest="{DynamicResource SmallCircleButton}"
+                    WidthRequest="{DynamicResource SmallCircleButton}"/>
+
+        <Button Style="{DynamicResource Primary-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource SmallCircleButtonRadius}"
+                    HeightRequest="{DynamicResource SmallCircleButton}"
+                    WidthRequest="{DynamicResource SmallCircleButton}"/>
+        <Button Style="{DynamicResource Warning-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource SmallCircleButtonRadius}"
+                    HeightRequest="{DynamicResource SmallCircleButton}"
+                    WidthRequest="{DynamicResource SmallCircleButton}"/>
+
+        <Button Style="{DynamicResource Danger-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource SmallCircleButtonRadius}"
+                    HeightRequest="{DynamicResource SmallCircleButton}"
+                    WidthRequest="{DynamicResource SmallCircleButton}"/>
+
+        <Button Style="{DynamicResource Success-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource SmallCircleButtonRadius}"
+                    HeightRequest="{DynamicResource SmallCircleButton}"
+                    WidthRequest="{DynamicResource SmallCircleButton}"/>
+
+        <Button Style="{DynamicResource Info-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource SmallCircleButtonRadius}"
+                    HeightRequest="{DynamicResource SmallCircleButton}"
+                    WidthRequest="{DynamicResource SmallCircleButton}"/>
+      </StackLayout>
+
+      <Label Text="Medium Full Circle Button" Style="{DynamicResource ApplicationTitle}"/>
+      <StackLayout Orientation="Horizontal">
+        <Button Style="{DynamicResource Default-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource MediumCircleButtonRadius}"
+                    HeightRequest="{DynamicResource MediumCircleButton}"
+                    WidthRequest="{DynamicResource MediumCircleButton}"/>
+
+        <Button Style="{DynamicResource Primary-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource MediumCircleButtonRadius}"
+                    HeightRequest="{DynamicResource MediumCircleButton}"
+                    WidthRequest="{DynamicResource MediumCircleButton}"/>
+        <Button Style="{DynamicResource Warning-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource MediumCircleButtonRadius}"
+                    HeightRequest="{DynamicResource MediumCircleButton}"
+                    WidthRequest="{DynamicResource MediumCircleButton}"/>
+
+        <Button Style="{DynamicResource Danger-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource MediumCircleButtonRadius}"
+                    HeightRequest="{DynamicResource MediumCircleButton}"
+                    WidthRequest="{DynamicResource MediumCircleButton}"/>
+
+        <Button Style="{DynamicResource Success-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource MediumCircleButtonRadius}"
+                    HeightRequest="{DynamicResource MediumCircleButton}"
+                    WidthRequest="{DynamicResource MediumCircleButton}"/>
+
+        <Button Style="{DynamicResource Info-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource MediumCircleButtonRadius}"
+                    HeightRequest="{DynamicResource MediumCircleButton}"
+                    WidthRequest="{DynamicResource MediumCircleButton}"/>
+      </StackLayout>
+
+      <Label Text="Large Full Circle Button" Style="{DynamicResource ApplicationTitle}"/>
+      <StackLayout Orientation="Horizontal">
+        <Button Style="{DynamicResource Default-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource LargeCircleButtonRadius}"
+                    HeightRequest="{DynamicResource LargeCircleButton}"
+                    WidthRequest="{DynamicResource LargeCircleButton}"/>
+
+        <Button Style="{DynamicResource Primary-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource LargeCircleButtonRadius}"
+                    HeightRequest="{DynamicResource LargeCircleButton}"
+                    WidthRequest="{DynamicResource LargeCircleButton}"/>
+        <Button Style="{DynamicResource Warning-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource LargeCircleButtonRadius}"
+                    HeightRequest="{DynamicResource LargeCircleButton}"
+                    WidthRequest="{DynamicResource LargeCircleButton}"/>
+
+        <Button Style="{DynamicResource Danger-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource LargeCircleButtonRadius}"
+                    HeightRequest="{DynamicResource LargeCircleButton}"
+                    WidthRequest="{DynamicResource LargeCircleButton}"/>
+
+        <Button Style="{DynamicResource Success-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource LargeCircleButtonRadius}"
+                    HeightRequest="{DynamicResource LargeCircleButton}"
+                    WidthRequest="{DynamicResource LargeCircleButton}"/>
+
+        <Button Style="{DynamicResource Info-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="+"
+                    BorderRadius="{DynamicResource LargeCircleButtonRadius}"
+                    HeightRequest="{DynamicResource LargeCircleButton}"
+                    WidthRequest="{DynamicResource LargeCircleButton}"/>
+      </StackLayout>
+
+      <Label Text="Semi Circle Button" Style="{DynamicResource ApplicationTitle}"/>
+      <StackLayout Orientation="Horizontal">
+        <Button Style="{DynamicResource Default-Semi-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Circle Button"/>
+
+        <Button Style="{DynamicResource Primary-Semi-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Circle Button"/>
+
+        <Button Style="{DynamicResource Warning-Semi-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Circle Button"/>
+
+        <Button Style="{DynamicResource Danger-Semi-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Circle Button"/>
+
+        <Button Style="{DynamicResource Success-Semi-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Circle Button"/>
+
+        <Button Style="{DynamicResource Info-Semi-Circle-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Circle Button"/>
+      </StackLayout>
+
+      <Label Text="Rounded Button" Style="{DynamicResource ApplicationTitle}"/>
+      <StackLayout Orientation="Horizontal">
+        <Button Style="{DynamicResource Default-Rounded-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Rounded Button"/>
+
+        <Button Style="{DynamicResource Primary-Rounded-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Rounded Button"/>
+
+        <Button Style="{DynamicResource Warning-Rounded-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Rounded Button"/>
+
+        <Button Style="{DynamicResource Danger-Rounded-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Rounded Button"/>
+
+        <Button Style="{DynamicResource Success-Rounded-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Rounded Button"/>
+
+        <Button Style="{DynamicResource Info-Rounded-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Rounded Button"/>
+      </StackLayout>
+
+      <Label Text="Flat Button" Style="{DynamicResource ApplicationTitle}"/>
+      <StackLayout Orientation="Horizontal">
+        <Button Style="{DynamicResource Default-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Flat Button"/>
+
+        <Button Style="{DynamicResource Primary-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Flat Button"/>
+
+        <Button Style="{DynamicResource Warning-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Flat Button"/>
+
+        <Button Style="{DynamicResource Danger-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Flat Button"/>
+
+        <Button Style="{DynamicResource Success-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Flat Button"/>
+
+        <Button Style="{DynamicResource Info-Button}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Flat Button"/>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

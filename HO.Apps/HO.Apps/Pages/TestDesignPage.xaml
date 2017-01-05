@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+						 xmlns:local="clr-namespace:HO.Apps.Controls"
+						 x:Class="HO.Apps.Pages.TestDesignPage">
+	<ContentPage.Resources>
+	</ContentPage.Resources>
+
+	<Grid Padding="24">
+		<StackLayout x:Name="label1" Padding="24,0"  VerticalOptions="Center">
+			<Label AutomationId="label1" Style="{DynamicResource labelStyle}" Text="Welcome to Sport - a leaderboard app built with Xamarin Forms and Azure. Join various leagues and challenge your way to the top!"
+		FontSize="Medium" XAlign="Center" />
+		</StackLayout>
+
+		<StackLayout x:Name="label2" Grid.Row="1" Padding="24,0"  VerticalOptions="Center">
+			<Label Style="{DynamicResource labelStyle}" AutomationId="label2" Text="Before we get going, lets get you registered." FontSize="Medium" XAlign="Center" />
+			<local:HOEntry x:Name="txtAlias" AutomationId="aliasText" Text="" Font="Large"
+				HasBorder="false" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" MaxLength="14" />
+		</StackLayout>
+
+		<StackLayout x:Name="buttonStack" Spacing="0"  Grid.Row="2" VerticalOptions="End">
+			<ActivityIndicator  HorizontalOptions="Center"
+		VerticalOptions="EndAndExpand" />
+
+			<Label Text="Status"  FontSize="Medium"
+		XAlign="Center" YAlign="Center" VerticalOptions="EndAndExpand" HeightRequest="70" />
+			<local:ImageButton Text="Home"
+												 WidthRequest="160"
+												 HeightRequest="50"
+												 ButtonBackgroundColor="{DynamicResource tealDark}"
+												 ButtonForgroundColor="{DynamicResource BlackColor}"
+												 Clicked="HandleAccepted" >
+				<local:ImageButton.Source>
+					<OnPlatform x:TypeArguments="FileImageSource">
+						<OnPlatform.iOS>Images/slideout.png</OnPlatform.iOS>
+						<OnPlatform.Android>slideout.png</OnPlatform.Android>
+						<OnPlatform.WinPhone>Images/slideout.png</OnPlatform.WinPhone>
+					</OnPlatform>
+				</local:ImageButton.Source>
+			</local:ImageButton>
+
+			<Button Style="{DynamicResource HomeButton}"/>
+			<Button Style="{DynamicResource OkButton}"/>
+			<Button Style="{DynamicResource CancelButton}"/>
+
+
+			<local:HOButton x:Name="btnAuthenticate" AutomationId="authButton" Text="SIGN IN"
+		VerticalOptions="EndAndExpand" Style="{DynamicResource wizardButton}"/>
+
+		</StackLayout>
+	</Grid>
+</ContentPage>

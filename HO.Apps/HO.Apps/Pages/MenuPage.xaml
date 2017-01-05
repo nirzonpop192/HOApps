@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HO.Apps.Pages.MenuPage"
+             xmlns:Controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:Converters="clr-namespace:HO.Apps.Converters"
+             Title="{Binding Title}"
+             Icon="{Binding Icon}"
+             BackgroundColor="{DynamicResource SidebarBackgroundColor}">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Converters:CrossImageSourceConverter x:Key="CrossImageSourceConverter" />
+      <Converters:ImageSourceConverter x:Key="ImageSourceConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ContentPage.BackgroundColor>
+    <!--<OnPlatform x:TypeArguments="Color"
+                Android="#F5F5F5" />-->
+  </ContentPage.BackgroundColor>
+  <ContentPage.Content>
+    <StackLayout>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="10"/>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="30"/>
+          <RowDefinition Height="80"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+        <BoxView Grid.ColumnSpan="3"
+             Grid.RowSpan="4"
+             BackgroundColor="{DynamicResource SidebarHeaderBackgroundColor}"/>
+        <Image Grid.Column="1"
+           Grid.Row="1"
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="EndAndExpand">
+          <Image.Source>
+            <OnPlatform x:TypeArguments="ImageSource">
+              <OnPlatform.iOS>Images/logo.png</OnPlatform.iOS>
+              <OnPlatform.Android>logo.png</OnPlatform.Android>
+              <OnPlatform.WinPhone>Images/logo.png</OnPlatform.WinPhone>
+            </OnPlatform>
+          </Image.Source>
+        </Image>
+        <Label
+        Grid.Column="1"
+        Grid.Row="2"
+        FontSize="Large"
+        Text="{Binding ApplicationTitle}"
+        TextColor="{DynamicResource SidebarHeaderColor}"/>
+      </Grid>
+      <ListView CachingStrategy="RecycleElement"
+                ItemsSource="{Binding MenuItems}"
+                ItemTapped="MenuItemTapped"
+            SeparatorColor="{DynamicResource SidebarSeparatorColor}"
+            Grid.ColumnSpan="3"
+            Grid.Row="4"
+            HasUnevenRows="True"
+                    HeightRequest="300">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Padding="10,15"
+                       Spacing="15"
+                       Orientation="Horizontal"
+                       BackgroundColor="{DynamicResource SidebarBackgroundColor}">
+                <Image HeightRequest="35"
+                   WidthRequest="35"
+                   Source="{Binding Icon, Converter={StaticResource CrossImageSourceConverter}}" />
+                <Label Text="{Binding Title}"
+                       FontFamily="SegoeUI"
+                   VerticalOptions="Center"
+                   TextColor="{DynamicResource SidebarColor}"/>
+
+                <Image HeightRequest="30"
+                   WidthRequest="30"
+                   HorizontalOptions="EndAndExpand">
+                  <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                      <OnPlatform.iOS>Images/right.png</OnPlatform.iOS>
+                      <OnPlatform.Android>right.png</OnPlatform.Android>
+                      <OnPlatform.WinPhone>Images/right.png</OnPlatform.WinPhone>
+                    </OnPlatform>
+                  </Image.Source>
+                </Image>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <BoxView BackgroundColor="{DynamicResource SidebarHeaderBackgroundColor}"/>
+      <ListView ItemsSource="{Binding Sponsors}"
+                HeightRequest="200"
+                ItemTapped="SponsorItemTapped">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Padding="5">
+                <Image Source="{Binding SponsorIcon, Converter={StaticResource ImageSourceConverter}}"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="Start"
+                       WidthRequest="200"
+                       HeightRequest="120">
+                </Image>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+
+
+
+
+
+    <!--<ListView x:Name="ListViewMenu"
+                  CachingStrategy="RecycleElement"
+                  SeparatorColor="{DynamicResource SidebarSeparatorColor}"
+                  Grid.ColumnSpan="3"
+                  Grid.Row="4"
+                  HasUnevenRows="True">
+            <ListView.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                    </Grid.RowDefinitions>
+                    <BoxView Grid.ColumnSpan="3"
+                             Grid.RowSpan="4"
+                             BackgroundColor="{DynamicResource SidebarHeaderBackgroundColor}"/>
+                    <Image Grid.Column="1"
+                           Grid.Row="1"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="EndAndExpand">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <OnPlatform.iOS>Images/logo.png</OnPlatform.iOS>
+                                <OnPlatform.Android>logo.png</OnPlatform.Android>
+                                <OnPlatform.WinPhone>Images/logo.png</OnPlatform.WinPhone>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    -->
+    <!--<Controls:CircleImage
+              Grid.Column="1"
+              Grid.Row="1"
+              BorderColor="White"
+              BorderThickness="5"
+              HorizontalOptions="Start"
+              VerticalOptions="End"
+              Source="logo.png"/>-->
+    <!--
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        FontSize="Large"
+                        Text="m.i.l.k. Digital ID"
+                        TextColor="{DynamicResource SidebarHeaderColor}"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10,15"
+                                     Spacing="15"
+                                     Orientation="Horizontal"
+                                     VerticalOptions="CenterAndExpand"
+                                     BackgroundColor="{DynamicResource SidebarBackgroundColor}">
+                            <Image HeightRequest="35"
+                                   WidthRequest="35" 
+                                   Source="{Binding Icon, Converter={StaticResource CrossImageSourceConverter}}" />
+                            <Label Text="{Binding Title}"
+                                   VerticalOptions="Center"
+                                   TextColor="{DynamicResource SidebarColor}"/>
+                            <Image Source="right.png"
+                                   HeightRequest="30"
+                                   WidthRequest="30"
+                                   HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <StackLayout BackgroundColor="{DynamicResource SidebarFooterBackgroundColor}"
+                             VerticalOptions="FillAndExpand">
+                    <BoxView Color="{DynamicResource SidebarSeparatorColor}"
+                             HeightRequest="2"/>
+                    <StackLayout Padding="10">
+                        <Image HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="Start">
+                            <Image.Source>
+                                <OnPlatform x:TypeArguments="ImageSource">
+                                    <OnPlatform.iOS>Images/Splash.jpg</OnPlatform.iOS>
+                                    <OnPlatform.Android>Splash.jpg</OnPlatform.Android>
+                                    <OnPlatform.WinPhone>Images/Splash.jpg</OnPlatform.WinPhone>
+                                </OnPlatform>
+                            </Image.Source>
+                        </Image>
+                    </StackLayout>
+                </StackLayout>
+            </ListView.Footer>
+        </ListView>-->
+  </ContentPage.Content>
+</ContentPage>

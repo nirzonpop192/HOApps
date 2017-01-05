@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">Home Organizer</string>
+    <string name="DrawerOpen">Open</string>
+    <string name="DrawerClose">Close</string>
+  <!--  splash screen-->
+  <string name="Str_toContinue">Click Image to Continue</string>
+
+  <!-- user setting -->
+  <string name="Setting_Shaking_hilight">Shaking Option</string>
+  <string name="Setting_Shaking_title">Device Shaking Option</string>
+  <string name="Setting_Shaking_Details">Hand Shaking Option </string>
+
+
+  <!-- Theme setting -->
+  <string name="Setting_Theme_hilight">Select Theme</string>
+  <string name="Str_Theme_Red">Red Theme</string>
+  <string name="Str_Theme_Blue">Blue Theme</string>
+  <string name="Str_Theme_Default">Default Theme</string>
+
+  <!-- dialog title -->
+  <string name="Invalid_title">Invalid</string>
+  <string name="Error_title">Error</string>
+
+  <!-- dialog message  -->
+  <string name="Invalid_msg">Invalid</string>
+  <string name="Error_msg_PromoCode">Promo Code Missing</string>
+  <string name="Invalid_msg_PomoCode">Invalid Promo Code</string>
+</resources>

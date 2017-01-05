@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page:AboutPageXaml xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="HO.Apps.Pages.About.AboutPage"
+                    xmlns:Page="clr-namespace:HO.Apps.Pages.About"
+                    Title="{Binding Title}"
+                    BackgroundColor="{DynamicResource PageBackgroundColor}">
+  <Page:AboutPageXaml.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Button">
+        <Setter Property="HeightRequest" Value="200" />
+      </Style>
+    </ResourceDictionary>
+  </Page:AboutPageXaml.Resources>
+  <StackLayout Orientation="Horizontal"
+               Padding="10"
+               Spacing="{DynamicResource DefaultSpacing}">
+    
+  </StackLayout>
+</Page:AboutPageXaml>

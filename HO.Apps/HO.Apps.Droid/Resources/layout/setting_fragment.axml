@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp">
+        <TextView
+            android:padding="5dp"
+            android:textColor="@color/Color_Highlight_text"
+            android:text="@string/Setting_Shaking_hilight"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="220.5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_hilight_"
+            android:layout_marginRight="0.0dp" />
+        <TextView
+            android:padding="5dp"
+            android:text="@string/Setting_Shaking_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_title_"
+            android:layout_below="@id/tv_hilight_"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="74.5dp" />
+        <TextView
+            android:padding="5dp"
+            android:text="@string/Setting_Shaking_Details"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_details_"
+            android:layout_below="@id/tv_title_" />
+    <!--        <CheckBox
+            android:id="@+id/cB_setting_setting"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_hilight_"
+            android:layout_alignTop="@id/tv_title_" />-->
+        <Switch
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_hilight_"
+            android:layout_alignTop="@id/tv_title_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/swch_setting_shaking" />
+    </RelativeLayout>
+
+  <!--  Theme setting-->
+  <LinearLayout
+      android:layout_margin="15dp"
+      android:orientation="vertical"
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent">
+    <TextView
+        android:padding="@dimen/padding_5dp"
+        android:textColor="@color/Color_Highlight_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="220.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_hilight_theme"
+        android:layout_marginRight="0.0dp"
+        android:text="@string/Setting_Theme_hilight" />
+    <RadioGroup
+        android:minHeight="25dp"
+        android:minWidth="25dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupTheme">
+      <RadioButton
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:text="@string/Str_Theme_Red"
+          android:id="@+id/rbtn_blueTheme" />
+      <RadioButton
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:text="@string/Str_Theme_Blue"
+          android:id="@+id/navyBlueTheme" />
+      <RadioButton
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+                
+           android:text="@string/Str_Theme_Default"
+                
+          android:id="@+id/irisBlueTheme" />
+      <RadioButton
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:text="Blue Theme"
+          android:id="@+id/bondiBlueTheme" />
+    </RadioGroup>
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#000736"
+        android:weightSum="1"
+        android:paddingTop="1dp"
+        android:paddingLeft="3dp"
+        android:minHeight="50dp">
+        <ImageView
+            android:id="@+id/Icon"
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="80dp" />
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight=".6"
+            android:weightSum="3"
+            android:paddingRight="3dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/childName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:textColorHighlight="#000"
+                android:text="Shuvo"
+                android:paddingTop="5dp"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+            <View
+                android:layout_height="1dp"
+                android:paddingRight="2dp"
+                android:layout_width="match_parent"
+                android:background="#FFF" />
+            <TextView
+                android:id="@+id/childDescription"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="Hello Dear"
+                android:paddingTop="5dp"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+            <View
+                android:layout_height="1dp"
+                android:paddingRight="2dp"
+                android:layout_width="match_parent"
+                android:background="#FFF" />
+            <TextView
+                android:id="@+id/childInformation"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="Hello Dear"
+                android:paddingTop="5dp"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+            <View
+                android:layout_height="1dp"
+                android:paddingRight="2dp"
+                android:layout_width="match_parent"
+                android:background="#FFF" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

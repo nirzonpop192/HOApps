@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HO.Apps.Pages.DigitalID.AddmilkDigitalIDPage"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:HO.Apps.Controls"
+             xmlns:Converters="clr-namespace:HO.Apps.Converters"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             Title="{Binding Title}">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Converters:InverseBooleanConverter x:Key="boolInverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <StackLayout Padding="10"
+             Spacing="{DynamicResource DefaultSpacing}">
+    <StackLayout Style="{DynamicResource Alert-Warning}"
+      IsVisible="{Binding IsValid, Converter={StaticResource boolInverter}}">
+      <Label Text="{Binding Message}"
+       Style="{DynamicResource Alert-Label}"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal"
+             HorizontalOptions="FillAndExpand">
+      <StackLayout HorizontalOptions="FillAndExpand">
+        <StackLayout>
+          <Button Style="{DynamicResource Danger-Circle-Button}"
+        HorizontalOptions="CenterAndExpand"
+        Text="+"
+        BorderRadius="{DynamicResource MediumCircleButtonRadius}"
+        HeightRequest="{DynamicResource MediumCircleButton}"
+        WidthRequest="{DynamicResource MediumCircleButton}"
+        Command="{Binding FrontCameraCommand}"/>
+        </StackLayout>
+        <StackLayout>
+          <Label Style="{DynamicResource Control-Label}" Text="First Name" />
+          <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter First Name"
+       Text="{Binding FirstStep.FirstName}"/>
+        </StackLayout>
+        <StackLayout>
+          <Label Style="{DynamicResource Control-Label}" Text="Middle Name" />
+          <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Middle Name"
+       Text="{Binding FirstStep.MiddleName}"/>
+        </StackLayout>
+        <StackLayout>
+          <Label Style="{DynamicResource Control-Label}" Text="Gender" />
+          <local:HOPicker x:Name="GenderPicker"
+        Style="{DynamicResource Picker-Control}"
+        SelectedIndexChanged="GenderPicker_SelectedIndexChanged"/>
+        </StackLayout>
+        <StackLayout>
+          <Label Style="{DynamicResource Control-Label}" Text="Height" />
+          <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Height"
+       Text="{Binding FirstStep.Height}"/>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout HorizontalOptions="FillAndExpand">
+        <StackLayout>
+          <Button Style="{DynamicResource Danger-Circle-Button}"
+        HorizontalOptions="CenterAndExpand"
+        Text="+"
+        BorderRadius="{DynamicResource MediumCircleButtonRadius}"
+        HeightRequest="{DynamicResource MediumCircleButton}"
+        WidthRequest="{DynamicResource MediumCircleButton}"
+        Command="{Binding SideCameraCommand}"/>
+        </StackLayout>
+        <StackLayout>
+          <Label Style="{DynamicResource Control-Label}" Text="Last Name" />
+          <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Last Name"
+       Text="{Binding FirstStep.LastName}"/>
+        </StackLayout>
+        <StackLayout>
+          <Label Style="{DynamicResource Control-Label}" Text="Nickname" />
+          <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Nickname"
+       Text="{Binding FirstStep.NickName}"/>
+        </StackLayout>
+        <StackLayout>
+          <Label Style="{DynamicResource Control-Label}" Text="Date Of Birth" />
+          <local:HODatePicker VerticalOptions="CenterAndExpand" Date="{Binding FirstStep.DateOfBirth}">
+            <local:HODatePicker.Format>yyyy-MM-dd</local:HODatePicker.Format>
+            <local:HODatePicker.MinimumDate>
+              <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                  <x:String>Jan 1 1985</x:String>
+                </x:Arguments>
+              </sys:DateTime>
+            </local:HODatePicker.MinimumDate>
+            <local:HODatePicker.MaximumDate>
+              <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                  <x:String>Dec 31 2050</x:String>
+                </x:Arguments>
+              </sys:DateTime>
+            </local:HODatePicker.MaximumDate>
+          </local:HODatePicker>
+        </StackLayout>
+        <StackLayout>
+          <Label Style="{DynamicResource Control-Label}" Text="Weight" />
+          <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Weight"
+       Text="{Binding FirstStep.Weight}"/>
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Button Style="{DynamicResource HomeButton}"
+              Command="{Binding HomeCommand}"/>
+      <Button Style="{DynamicResource NextButton}"
+        Command="{Binding GotoNextStep}"/>
+    </StackLayout>
+  </StackLayout>
+</ContentPage>

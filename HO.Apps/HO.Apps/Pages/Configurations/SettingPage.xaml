@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HO.Apps.Pages.Configurations.SettingPage"
+             Title="{Binding Title}">
+  <StackLayout Padding="10"
+             Spacing="{DynamicResource DefaultSpacing}">
+    <TableView Intent="Settings">
+      <TableRoot>
+        <TableSection Title="General Settings">
+          <SwitchCell x:Name="ThemeSwitch" Text="Theme enabled?"
+                      Tapped="ThemeSwitchTapped"/>
+          <SwitchCell x:Name="ResetSwitch" Text="Reset Application"
+                      Tapped="ResetSwitchTapped"/>
+        </TableSection>
+        <!--<TableSection Title="Keyboards">
+          <local:HOEntryCell Label="Deault" Placeholder="default" />
+          <local:HOEntryCell Label="Chat" Placeholder="omg brb ttyl gtg lol" Keyboard="Chat" />
+          <local:HOEntryCell Label="Email" Placeholder="sales@xamarin.com" Keyboard="Email" />
+          <local:HOEntryCell Label="Numberic" Placeholder="55" Keyboard="Numeric" />
+          <local:HOEntryCell Label="Telephone" Placeholder="+1 012 345 6789" Keyboard="Telephone" />
+          <local:HOEntryCell Label="Text" Placeholder="text" Keyboard="Text" />
+          <local:HOEntryCell Label="Url" Placeholder="http://developer.xamarin.com" Keyboard="Url" />
+        </TableSection>-->
+      </TableRoot>
+    </TableView>
+    <StackLayout x:Name="ThemePanel"
+                 Spacing="{DynamicResource DefaultSpacing}">
+      <StackLayout HorizontalOptions="CenterAndExpand"
+             Orientation="Horizontal">
+        <Button Style="{DynamicResource Circle-Button}"
+        BackgroundColor="White"
+        HeightRequest="50"
+        WidthRequest="50"
+        Command="{Binding ChangeTheme}"
+        CommandParameter="White"/>
+        <Button Style="{DynamicResource Circle-Button}"
+        BackgroundColor="Black"
+        HeightRequest="50"
+        WidthRequest="50"
+        Command="{Binding ChangeTheme}"
+        CommandParameter="Dark"/>
+        <Button Style="{DynamicResource Circle-Button}"
+        BackgroundColor="Green"
+        HeightRequest="50"
+        WidthRequest="50"
+        Command="{Binding ChangeTheme}"
+        CommandParameter="Green"/>
+        <Button Style="{DynamicResource Circle-Button}"
+        BackgroundColor="Blue"
+        HeightRequest="50"
+        WidthRequest="50"
+        Command="{Binding ChangeTheme}"
+        CommandParameter="Blue"/>
+        <Button Style="{DynamicResource Circle-Button}"
+        BackgroundColor="Yellow"
+        HeightRequest="50"
+        WidthRequest="50"
+        Command="{Binding ChangeTheme}"
+        CommandParameter="Yellow"/>
+      </StackLayout>
+      <StackLayout HorizontalOptions="CenterAndExpand">
+        <Label Text="Choose A Color For Your Child"
+       FontSize="{DynamicResource MediumFontSize}"
+       TextColor="{DynamicResource BlackColor}"/>
+      </StackLayout>
+    </StackLayout>
+  </StackLayout>
+</ContentPage>

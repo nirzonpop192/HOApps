@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page:PromoCodePageXaml xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:Controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+                        xmlns:local="clr-namespace:HO.Apps.Controls"
+                        xmlns:Page="clr-namespace:HO.Apps.Pages.Installation"
+                        xmlns:Converters="clr-namespace:HO.Apps.Converters"
+                        x:Class="HO.Apps.Pages.Installation.PromoCodePage"
+                        Title="{Binding Title}"
+                        BackgroundColor="{DynamicResource PageBackgroundColor}">
+  <Page:PromoCodePageXaml.Resources>
+    <ResourceDictionary>
+      <Converters:InverseBooleanConverter x:Key="boolInverter" />
+    </ResourceDictionary>
+  </Page:PromoCodePageXaml.Resources>
+
+  <StackLayout Padding="10"
+               Spacing="10">
+    <StackLayout Orientation="Horizontal">
+      <StackLayout>
+        <Label Text="m.i.l.k. Digital ID" Style="{DynamicResource ApplicationTitle}"/>
+      </StackLayout>
+      <StackLayout HorizontalOptions="EndAndExpand">
+        <Controls:CircleImage BorderColor="White"
+                              BorderThickness="5"
+                              VerticalOptions="End"
+                              Source="icon.png"
+                              HorizontalOptions="CenterAndExpand"
+                              WidthRequest="200"
+                              HeightRequest="200"/>
+      </StackLayout>
+    </StackLayout>
+    <StackLayout Style="{DynamicResource Alert-Warning}"
+                 IsVisible="{Binding IsValid, Converter={StaticResource boolInverter}}">
+      <Label Text="{Binding Message}"
+             Style="{DynamicResource Alert-Label}"/>
+    </StackLayout>
+    <StackLayout>
+      <Label Text="Promo Code" Style="{DynamicResource Control-Label}" />
+      <local:HOEntry Style="{DynamicResource Form-Control}"
+             Placeholder="Enter Promo Code"
+             Text="{Binding PromoCode}"/>
+      <!--<local:HOEntry Style="{DynamicResource Form-Control}"
+             Placeholder="Enter Promo Code"
+             Text="{Binding PromoCode}"/>-->
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Button x:Name="VerifyButton" Style="{DynamicResource OkButton}"
+              Command="{Binding CheckPromoCodeCommand}"/>
+      <Button Style="{DynamicResource CancelButton}"
+              Command="{Binding CloseCommand}"/>
+      <ActivityIndicator x:Name="ProgressActivity"
+                         IsEnabled="{Binding IsPresentingPromoCodeUI}"
+                         IsVisible="{Binding IsPresentingPromoCodeUI}"
+                         IsRunning="{Binding IsPresentingPromoCodeUI}"
+                         Color="{DynamicResource ActivityColor}"/>
+    </StackLayout>
+  </StackLayout>
+</Page:PromoCodePageXaml>

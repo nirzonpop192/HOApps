@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HO.Apps.Pages.DigitalID.AddmilkDigitalIDFinalStepPage"
+             xmlns:Converters="clr-namespace:HO.Apps.Converters"
+             xmlns:local="clr-namespace:HO.Apps.Controls"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             Title="{Binding Title}">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Converters:InverseBooleanConverter x:Key="boolInverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ScrollView>
+    <StackLayout Padding="10"
+         HorizontalOptions="FillAndExpand">
+      <StackLayout>
+        <Label Style="{DynamicResource Control-Label}" Text="In a missing person situation, contact your local authorities."/>
+      </StackLayout>
+      <StackLayout>
+        <Label Style="{DynamicResource Control-Label}" Text="Please review the Emergency Information document located in the m.i.l.k. Drawer."/>
+      </StackLayout>
+      <StackLayout Style="{DynamicResource Alert-Warning}"
+             IsVisible="{Binding IsValid, Converter={StaticResource boolInverter}}">
+        <Label Text="{Binding Message}"
+       Style="{DynamicResource Alert-Label}"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <StackLayout Spacing="10"
+     HorizontalOptions="FillAndExpand">
+          <StackLayout>
+            <Label Style="{DynamicResource Control-Label}" Text="Current Age" />
+            <local:HOEntry Style="{DynamicResource Form-Control}"
+       IsEnabled="False"
+       Text="{Binding FinalStep.CurrentAge}"/>
+          </StackLayout>
+          <StackLayout>
+            <Label Style="{DynamicResource Control-Label}" Text="Blood Type" />
+            <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Blood Type"
+       Text="{Binding FinalStep.BloodType}"/>
+          </StackLayout>
+          <StackLayout>
+            <Label Style="{DynamicResource Control-Label}" Text="Race" />
+            <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Race"
+       Text="{Binding FinalStep.Race}"/>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout Spacing="10"
+     HorizontalOptions="FillAndExpand">
+          <StackLayout>
+            <Label Style="{DynamicResource Control-Label}" Text="Hair Color" />
+            <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Hair Color"
+       Text="{Binding FinalStep.HairColor}"/>
+          </StackLayout>
+          <StackLayout>
+            <Label Style="{DynamicResource Control-Label}" Text="Eye Color" />
+            <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Eye Color"
+       Text="{Binding FinalStep.EyeColor}"/>
+          </StackLayout>
+          <StackLayout>
+            <Label Style="{DynamicResource Control-Label}" Text="Glasses or Contacts" />
+            <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Glasses or Contacts"
+       Text="{Binding FinalStep.Glasses}"/>
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout>
+        <Label Style="{DynamicResource Control-Label}" Text="Distinguishing Marks" />
+        <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Distinguishing Marks"
+       Text="{Binding FinalStep.DistinguishingMarks}"/>
+      </StackLayout>
+      <StackLayout>
+        <Label Style="{DynamicResource Control-Label}" Text="Contact" />
+        <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Contact"
+       Text="{Binding FinalStep.Contact}"/>
+      </StackLayout>
+      <StackLayout>
+        <Label Style="{DynamicResource Control-Label}" Text="Comments" />
+        <local:HOEntry Style="{DynamicResource Form-Control}"
+       Placeholder="Enter Comments"
+       Text="{Binding FinalStep.Comments}"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Button Style="{DynamicResource HomeButton}"
+                Command="{Binding HomeCommand}"/>
+        <Button Style="{DynamicResource OkButton}"
+                Command="{Binding SavemilkDigitalIDCommand}"/>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

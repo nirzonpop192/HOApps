@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:HO.Apps.Converters"
+            x:Class="HO.Apps.Pages.Home.HomePage"
+            Title="{Binding Title}"
+            BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <TabbedPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage Title="{Binding Name}" Icon="info.png">
+                <StackLayout Padding="5, 25">
+                    <Label Text="{Binding Name}"
+                           Font="Bold,Large"
+                           HorizontalOptions="Center" />
+                    <StackLayout Padding="50, 10">
+                        <Label Text="{Binding Content}"
+                               Font="Bold,Medium"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </TabbedPage.ItemTemplate>
+</TabbedPage>

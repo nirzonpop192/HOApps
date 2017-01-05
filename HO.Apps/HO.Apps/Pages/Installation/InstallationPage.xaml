@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HO.Apps.Pages.Installation.InstallationPage"
+             xmlns:Converters="clr-namespace:HO.Apps.Converters"
+             xmlns:local="clr-namespace:HO.Apps.Controls"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             Title="{Binding Title}">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Converters:InverseBooleanConverter x:Key="boolInverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ScrollView>
+    <StackLayout Padding="10"
+                 Spacing="{DynamicResource DefaultSpacing}"
+                 HorizontalOptions="FillAndExpand">
+      <StackLayout Orientation="Horizontal">
+        <StackLayout>
+          <Label Style="{DynamicResource Control-Label}" Text="Complete the following to register your Home Organizer" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="EndAndExpand">
+          <Label Style="{DynamicResource Control-Label}" Text="Promo Code:" />
+          <Label Style="{DynamicResource Control-Label}" Text="{Binding PromoCode}" />
+        </StackLayout>
+      </StackLayout>
+      <StackLayout>
+        <StackLayout Style="{DynamicResource Alert-Warning}"
+             IsVisible="{Binding IsValid, Converter={StaticResource boolInverter}}">
+          <Label Text="{Binding Message}"
+                 Style="{DynamicResource Alert-Label}"/>
+        </StackLayout>
+        <StackLayout>
+          <Label Style="{DynamicResource Control-Label}" Text="First time Installation:"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <StackLayout HorizontalOptions="FillAndExpand">
+            <StackLayout>
+              <Label Style="{DynamicResource Control-Label}" Text="First Name" />
+              <local:HOEntry Style="{DynamicResource Form-Control}"
+                     Placeholder="Enter First Name"
+                     Text="{Binding FirstName}"/>
+            </StackLayout>
+            <StackLayout>
+              <Label Style="{DynamicResource Control-Label}" Text="Email" />
+              <local:HOEntry Style="{DynamicResource Form-Control}"
+                     Placeholder="Enter Email"
+                     Text="{Binding Email}"/>
+            </StackLayout>
+            <StackLayout>
+              <Label Style="{DynamicResource Control-Label}" Text="Create Password" />
+              <local:HOEntry Style="{DynamicResource Form-Control}"
+                     IsPassword="True"
+                     Text="{Binding Password}"/>
+            </StackLayout>
+            <StackLayout>
+              <Label Style="{DynamicResource Control-Label}" Text="Secret Question" />
+              <local:HOPicker x:Name="SecretQuestionsPicker"
+                      Style="{DynamicResource Picker-Control}"
+                      SelectedIndexChanged="SecretQuestionsPicker_SelectedIndexChanged"/>
+            </StackLayout>
+            <StackLayout>
+              <Label Style="{DynamicResource Control-Label}" Text="Zip Code" />
+              <local:HOEntry Style="{DynamicResource Form-Control}"
+                     Placeholder="Enter Zip Code"
+                     Text="{Binding PostalCode}"/>
+            </StackLayout>
+          </StackLayout>
+          <StackLayout HorizontalOptions="FillAndExpand">
+            <StackLayout>
+              <Label Style="{DynamicResource Control-Label}" Text="Last Name" />
+              <local:HOEntry Style="{DynamicResource Form-Control}"
+                     Placeholder="Enter Last Name"
+                     Text="{Binding LastName}"/>
+            </StackLayout>
+            <StackLayout>
+              <Label Style="{DynamicResource Control-Label}" Text="Create User Name" />
+              <local:HOEntry Style="{DynamicResource Form-Control}"
+                     Placeholder="Enter User Name"
+                     Text="{Binding UserName}"/>
+            </StackLayout>
+            <StackLayout>
+              <Label Style="{DynamicResource Control-Label}" Text="Retype Password" />
+              <local:HOEntry Style="{DynamicResource Form-Control}"
+                     IsPassword="True"
+                     Text="{Binding ConfirmPassword}"/>
+            </StackLayout>
+            <StackLayout>
+              <Label Style="{DynamicResource Control-Label}" Text="Secret Answer" />
+              <local:HOEntry Style="{DynamicResource Form-Control}"
+                     Placeholder="Enter Answer"
+                     Text="{Binding SecretAnswer}"/>
+            </StackLayout>
+            <StackLayout>
+              <Label Style="{DynamicResource Control-Label}" Text="Language Preference" />
+              <local:HOPicker x:Name="LanguagePreferencePicker"
+                      Style="{DynamicResource Picker-Control}"
+                      SelectedIndexChanged="LanguagePreferencePicker_SelectedIndexChanged"/>
+            </StackLayout>
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout HorizontalOptions="Start">
+        <TableView HeightRequest="200"
+                   HorizontalOptions="StartAndExpand">
+          <TableRoot>
+            <TableSection>
+              <SwitchCell x:Name="milkSwitchCell"
+                          Text="Send me notification about missing children in my area."
+                          OnChanged="milkSwitchCell_OnChanged"/>
+              <SwitchCell x:Name="earsSwitchCell"
+                          Text="Send me notification about missing pets in my area."
+                          OnChanged="earsSwitchCell_OnChanged"/>
+            </TableSection>
+          </TableRoot>
+        </TableView>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Button Style="{DynamicResource OkButton}"
+                Command="{Binding CompleteSetupCommand}"/>
+        <Button Style="{DynamicResource CancelButton}"
+                Command="{Binding CloseCommand}"/>
+      </StackLayout>
+      <StackLayout>
+        <Label Style="{DynamicResource Control-Label}" Text="Have you previously installed Home Organizer 4 or 4.5?" />
+        <Label Style="{DynamicResource Control-Label}" Text="If so, please enter your Registration Code"/>
+        <local:HOEntry Style="{DynamicResource Form-Control}" Placeholder="Enter Registration Code" />
+        <Button Style="{DynamicResource OkButton}"
+                Command="{Binding RegisterCommand}"/>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>
