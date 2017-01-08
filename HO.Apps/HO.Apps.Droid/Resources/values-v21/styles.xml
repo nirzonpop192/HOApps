@@ -24,11 +24,11 @@
   <style name="BlackTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
 
    <!-- <item name="android:actionBarStyle">@style/ActionBarThemeBack</item>-->
-    <item name="android:background">#000000</item>
-    <item name="android:textColor">#FFF</item>
-
+    <item name="android:background">@color/gray_53</item>
+   <!-- <item name="android:textColor">#FFF</item>-->
+    <item name="android:textColor">@color/white</item>
   </style>
-
+ 
 
   <!-- BlueTheme Theme action bar-->
   <style name="BlueTheme" parent="Theme.AppCompat.Light.NoActionBar" >

@@ -2,98 +2,87 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_layout"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4692AA"
     android:padding="2dp"
     android:minWidth="25px"
     android:minHeight="25px">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rr">
-        <ImageButton
-            android:layout_width="80dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/and_icon"
-            android:layout_margin="10dp"
-            android:layout_height="80dp"
-            android:id="@+id/imageButton1" />
-        <ImageButton
-            android:layout_width="80dp"
-            android:background="@drawable/and_icon"
-            android:layout_height="80dp"
-            android:id="@+id/imageButton2"
-            android:layout_toRightOf="@+id/imageButton1"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="200dp" />
-        <ImageButton
-            android:layout_width="80dp"
-            android:background="@drawable/and_icon"
-            android:layout_height="80dp"
-            android:id="@+id/imageButton2"
-            android:layout_toLeftOf="@+id/imageButton3"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="240dp" />
-        <ImageButton
-            android:layout_width="80dp"
-            android:background="@drawable/and_icon"
-            android:layout_height="80dp"
-            android:id="@+id/imageButton3"
-            android:layout_alignParentRight="true"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="10dp" />
-    </RelativeLayout>
-<!-- <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1">
-        <ImageButton
-            android:layout_width="80dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/and_icon"
-            android:layout_margin="10dp"
-            android:layout_height="80dp"
-            android:id="@+id/imageButton1" />
-        <ImageButton
-            android:layout_width="80dp"
-            android:background="@drawable/and_icon"
-            android:layout_margin="10dp"
-            android:layout_height="80dp"
-            android:id="@+id/imageButton2" />
-        <ImageButton
-            android:layout_width="80dp"
-            android:background="@drawable/and_icon"
-            android:layout_margin="10dp"
-            android:layout_height="80dp"
-            android:id="@+id/imageButton3" />
-        <ImageButton
-            android:layout_width="80dp"
-            android:background="@drawable/and_icon"
-            android:layout_margin="10dp"
-            android:layout_height="80dp"
-            android:id="@+id/imageButton4" />
-    </LinearLayout>
-  -->
-    <View
-        android:layout_height="2dp"
-        android:layout_width="match_parent" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/linearLayout1">
-        <ListView
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/childList" />
+        android:layout_height="wrap_content"
+        android:id="@+id/rr">
+        <LinearLayout
+            android:id="@+id/ll_iv_1"
+            android:background="@color/my_purple"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="80dp"
+                android:background="@drawable/and_icon"
+                android:layout_height="80dp"
+                android:id="@+id/imageButton1" />
+        </LinearLayout>
+      <LinearLayout
+            android:id="@+id/ll_iv_2"
+            android:background="@color/my_purple"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="80dp"
+                android:background="@drawable/and_icon"
+                android:layout_height="80dp"
+                android:id="@+id/imageButton2" />
+        </LinearLayout>
+      <LinearLayout
+            android:id="@+id/ll_iv_3"
+            android:background="@color/my_purple"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="80dp"
+                android:background="@drawable/and_icon"
+                android:layout_height="80dp"
+                android:id="@+id/imageButton2" />
+        </LinearLayout>
+      <LinearLayout
+            android:id="@+id/ll_iv_4"
+            android:background="@color/my_purple"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="80dp"
+                android:background="@drawable/and_icon"
+                android:layout_height="80dp"
+                android:id="@+id/imageButton3" />
+        </LinearLayout>
     </LinearLayout>
+<!--  <View
+      android:layout_height="2dp"
+      android:layout_width="match_parent" />-->
+<!--    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:paddingTop="2dp">-->
+    <ListView
+        android:paddingTop="2dp"
+        android:background="@color/my_purple"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/childList" />
+<!-- </LinearLayout>-->
 </LinearLayout>

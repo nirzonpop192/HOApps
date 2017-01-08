@@ -19,9 +19,24 @@
   <color name ="bondiBlue">#00AAAD</color>
   <color name ="irisBlue">#00ACDE</color>
   
-  <!--THEME COLOR-->
  
-    <color name="my_blue">#3498DB</color>
+  
+  <!--THEME COLOR-->
+      <!-- Black theme -->
+          <!--  layout color-->
+  <color name ="gray_53">#878787</color>
+          <!--  text color-->
+  <color name ="white">#FFFFFF</color>
+  
+ <!-- Blue theme-->
+  <!--  layout backcolor-->
+  <color name="drak_blue_1">#324065</color>
+<!--  Edit text background-->
+  <color name="drak_blue_2">#4B597C</color>
+<!--  rOUND BORDER COLOR-->
+  <color name="light_blue">#00ABAD</color>
+  
+  <color name="my_blue">#3498DB</color>
     <color name="my_green">#77D065</color>
     <color name="my_purple">#B455B6</color>
     <color name="my_gray">#738182</color>

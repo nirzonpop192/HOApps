@@ -5,16 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
+        android:id="@+id/sv_lay"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:background="@color/color_log_bg">
-        <LinearLayout
+        android:background="@color/my_purple">
+      <LinearLayout
+         android:background="@color/my_purple"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="20dp"
-            android:background="@color/color_log_bg"
+         
             android:orientation="vertical">
-            <LinearLayout
+        <LinearLayout
+           android:background="@color/my_purple"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/first_layout"
@@ -296,7 +299,8 @@
                 android:layout_width="wrap_content"
                 android:id="@+id/iv_next"
                 android:layout_gravity="center"
-                android:src="@drawable/next" />
+                android:src="@drawable/next"
+                android:layout_marginTop="10dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -18,6 +18,7 @@ using Home_Organizer.Code.Controller.Sensor;
 using Home_Organizer.Code.View.Helper;
 using HO.Apps.Contracts;
 using HO.Apps.Droid;
+using HO.Apps.Droid.Code.Controller.Config;
 using HO.Apps.Models;
 using ImageViews.Rounded;
 using Square.Picasso;
@@ -128,6 +129,15 @@ namespace Home_Organizer.Fragment
             save = view.FindViewById<Button>(Resource.Id.btn_save);
 
             _milkDigitalIdService = DependencyService.Get<ImilkDigitalIDService>();
+
+            Android.Widget.ScrollView sv_lay = (Android.Widget.ScrollView)view.FindViewById(Resource.Id.sv_lay);
+            Android.Graphics.Color backgroundColor = new Android.Graphics.Color(ThemeUtill.OnActivityCreateSetTheme((Activity)mContext));
+
+            /**
+             * set back ground color dynamicly here 
+             */
+            sv_lay.SetBackgroundColor(backgroundColor);
+
         }
 
          void OnDateSet (object sender, DatePickerDialog.DateSetEventArgs e)

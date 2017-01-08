@@ -4,127 +4,127 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <ScrollView
-      android:layout_height="match_parent"
-      android:layout_width="match_parent"
-      android:background="@color/color_log_bg">
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ScrollView
         android:layout_height="match_parent"
-        android:padding="20dp"
-        android:background="@color/color_log_bg"
-        android:orientation="vertical">
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:id="@+id/first_layout"
-          android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:background="@color/color_log_bg">
         <LinearLayout
-            android:minWidth="25px"
-            android:minHeight="25px"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="5dp">
-          <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:id="@+id/childImage1"
-              android:layout_width="0dp"
-              android:layout_height="300dp"
-              android:layout_weight="1"
-              android:gravity="center"
-              android:padding="8dp"
-              android:src="@drawable/button_create"
-              android:layout_alignParentLeft="true" />
-          <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:id="@+id/childImage2"
-              android:layout_width="0dp"
-              android:layout_height="300dp"
-              android:padding="8dp"
-              android:layout_weight="1"
-              android:gravity="center"
-              android:layout_toLeftOf="@+id/childImage1"
-              android:layout_alignParentRight="true"
-              android:src="@drawable/button_create"
-              android:onClick="shuvo" />
-        </LinearLayout>
-        <EditText
-            android:textColor="#FFFFFF"
-            android:hint="First Name"
-            android:padding="5dp"
-            android:inputType="text"
-            android:textColorHint="#FFFFFF"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:textSize="20dp"
-            android:id="@+id/edt_first_name" />
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:paddingBottom="10dp"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:background="@color/color_log_bg"
             android:orientation="vertical">
-          <LinearLayout
-              android:orientation="horizontal"
-              android:minWidth="25px"
-              android:minHeight="25px"
-              android:layout_width="match_parent"
-              android:padding="5dp"
-              android:layout_height="wrap_content">
-            <EditText
-                android:layout_height="70dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:textColorHint="#FFFFFF"
-                android:id="@+id/birth_date"
-                android:inputType="date"
-                android:textColor="#FFFFFF"
-                android:hint="BirthDay" />
-            <EditText
-                android:layout_height="70dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:id="@+id/edt_gender"
-                android:textColorHint="#FFFFFF"
-                android:textColor="#FFFFFF"
-                android:hint="Gender" />
-          </LinearLayout>
-          <LinearLayout
-              android:orientation="horizontal"
-              android:minWidth="25px"
-              android:minHeight="25px"
-              android:layout_width="match_parent"
-              android:padding="5dp"
-              android:layout_height="wrap_content">
-            <EditText
-                android:layout_height="70dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:id="@+id/edt_weight"
-                android:textColorHint="#FFFFFF"
-                android:textColor="#FFFFFF"
-                android:inputType="number"
-                android:hint="Weight" />
-            <EditText
-                android:layout_height="70dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:id="@+id/edt_height"
-                android:textColorHint="#FFFFFF"
-                android:inputType="number"
-                android:textColor="#FFFFFF"
-                android:hint="Height" />
-          </LinearLayout>
-        </LinearLayout>
-      </LinearLayout>
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:id="@+id/second_layout"
-          android:orientation="vertical">
-        <LinearLayout
-            android:layout_height="500dp"
-            android:layout_width="match_parent"
-            android:padding="5dp"
-            android:orientation="horizontal">
-          <!--    <LinearLayout
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/first_layout"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp">
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/childImage1"
+                        android:layout_width="0dp"
+                        android:layout_height="300dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/button_create"
+                        android:layout_alignParentLeft="true" />
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/childImage2"
+                        android:layout_width="0dp"
+                        android:layout_height="300dp"
+                        android:padding="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_toLeftOf="@+id/childImage1"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/button_create"
+                        android:onClick="shuvo" />
+                </LinearLayout>
+                <EditText
+                    android:textColor="#FFFFFF"
+                    android:hint="First Name"
+                    android:padding="5dp"
+                    android:inputType="text"
+                    android:textColorHint="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="20dp"
+                    android:id="@+id/edt_first_name" />
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:layout_height="70dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textColorHint="#FFFFFF"
+                            android:id="@+id/birth_date"
+                            android:inputType="date"
+                            android:textColor="#FFFFFF"
+                            android:hint="BirthDay" />
+                        <EditText
+                            android:layout_height="70dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/edt_gender"
+                            android:textColorHint="#FFFFFF"
+                            android:textColor="#FFFFFF"
+                            android:hint="Gender" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:layout_height="70dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/edt_weight"
+                            android:textColorHint="#FFFFFF"
+                            android:textColor="#FFFFFF"
+                            android:inputType="number"
+                            android:hint="Weight" />
+                        <EditText
+                            android:layout_height="70dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/edt_height"
+                            android:textColorHint="#FFFFFF"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:hint="Height" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/second_layout"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_height="500dp"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+                <!--    <LinearLayout
                         android:layout_height="match_parent"
                         android:layout_weight=".3"
                         android:layout_width="0dp"
@@ -184,120 +184,120 @@
                             android:textColor="#FFFFFF"
                             android:text="Comments" />
                     </LinearLayout>-->
-          <LinearLayout
-              android:layout_height="match_parent"
-              android:layout_weight="1"
-              android:layout_width="0dp"
-              android:orientation="vertical">
-            <TextView
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/txt_current_age"
-                android:textColor="#FFFFFF"
-                android:layout_width="match_parent"
-                android:text="Current Age" />
-            <EditText
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:textColorHint="#FFFFFF"
-                android:id="@+id/edt_blood_type"
-                android:layout_width="match_parent"
-                android:hint="Blood Type"
-                android:inputType="text" />
-            <EditText
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/edt_race"
-                android:textColorHint="#FFFFFF"
-                android:layout_width="match_parent"
-                android:hint="Race"
-                android:inputType="text" />
-            <EditText
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:textColorHint="#FFFFFF"
-                android:id="@+id/edt_hair_color"
-                android:layout_width="match_parent"
-                android:hint="Hair Color"
-                android:inputType="text" />
-            <EditText
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:textColorHint="#FFFFFF"
-                android:id="@+id/edt_eye_color"
-                android:layout_width="match_parent"
-                android:hint="Eye Color"
-                android:inputType="text" />
-            <EditText
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:textColorHint="#FFFFFF"
-                android:id="@+id/edt_glasses"
-                android:layout_width="match_parent"
-                android:hint="Glasses or Contacts"
-                android:inputType="text" />
-            <EditText
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:textColorHint="#FFFFFF"
-                android:id="@+id/edt_distinguishing_mark"
-                android:layout_width="match_parent"
-                android:hint="Distinguishing Mark"
-                android:inputType="text" />
-            <EditText
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/edt_contact"
-                android:textColorHint="#FFFFFF"
-                android:layout_width="match_parent"
-                android:hint="Contact"
-                android:inputType="text" />
-            <EditText
-                android:layout_height="0dp"
-                android:id="@+id/edt_comments"
-                android:layout_weight="1"
-                android:textColorHint="#FFFFFF"
-                android:layout_width="match_parent"
-                android:hint="Comments"
-                android:inputType="text" />
-          </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/txt_current_age"
+                            android:textColor="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:text="Current Age" />
+                        <EditText
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textColorHint="#FFFFFF"
+                            android:id="@+id/edt_blood_type"
+                            android:layout_width="match_parent"
+                            android:hint="Blood Type"
+                            android:inputType="text" />
+                        <EditText
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/edt_race"
+                            android:textColorHint="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:hint="Race"
+                            android:inputType="text" />
+                        <EditText
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textColorHint="#FFFFFF"
+                            android:id="@+id/edt_hair_color"
+                            android:layout_width="match_parent"
+                            android:hint="Hair Color"
+                            android:inputType="text" />
+                        <EditText
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textColorHint="#FFFFFF"
+                            android:id="@+id/edt_eye_color"
+                            android:layout_width="match_parent"
+                            android:hint="Eye Color"
+                            android:inputType="text" />
+                        <EditText
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textColorHint="#FFFFFF"
+                            android:id="@+id/edt_glasses"
+                            android:layout_width="match_parent"
+                            android:hint="Glasses or Contacts"
+                            android:inputType="text" />
+                        <EditText
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textColorHint="#FFFFFF"
+                            android:id="@+id/edt_distinguishing_mark"
+                            android:layout_width="match_parent"
+                            android:hint="Distinguishing Mark"
+                            android:inputType="text" />
+                        <EditText
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:id="@+id/edt_contact"
+                            android:textColorHint="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:hint="Contact"
+                            android:inputType="text" />
+                        <EditText
+                            android:layout_height="0dp"
+                            android:id="@+id/edt_comments"
+                            android:layout_weight="1"
+                            android:textColorHint="#FFFFFF"
+                            android:layout_width="match_parent"
+                            android:hint="Comments"
+                            android:inputType="text" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:id="@+id/layout_save_cencle"
+                    android:background="@drawable/round_conner"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_height="100dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/btn_cencle"
+                        android:background="#d1efff"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:text="Cancel" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="3dp" />
+                    <Button
+                        android:layout_height="100dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:background="#d1efff"
+                        android:textStyle="bold"
+                        android:id="@+id/btn_save"
+                        android:text="Save" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/iv_next"
+                android:layout_gravity="center"
+                android:src="@drawable/next" />
         </LinearLayout>
-        <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:padding="5dp"
-            android:id="@+id/layout_save_cencle"
-            android:background="@drawable/round_conner"
-            android:orientation="horizontal">
-          <Button
-              android:layout_height="100dp"
-              android:layout_width="0dp"
-              android:layout_weight="1"
-              android:id="@+id/btn_cencle"
-              android:background="#d1efff"
-              android:textStyle="bold"
-              android:textSize="20dp"
-              android:text="Cancel" />
-          <View
-              android:layout_height="match_parent"
-              android:layout_width="3dp" />
-          <Button
-              android:layout_height="100dp"
-              android:layout_width="0dp"
-              android:layout_weight="1"
-              android:textSize="20dp"
-              android:background="#d1efff"
-              android:textStyle="bold"
-              android:id="@+id/btn_save"
-              android:text="Save" />
-        </LinearLayout>
-      </LinearLayout>
-      <ImageView
-          android:layout_height="wrap_content"
-          android:layout_width="wrap_content"
-          android:id="@+id/iv_next"
-          android:layout_gravity="center"
-          android:src="@drawable/next" />
-    </LinearLayout>
-  </ScrollView>
+    </ScrollView>
 </LinearLayout>

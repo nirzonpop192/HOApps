@@ -26,18 +26,19 @@ namespace Home_Organizer
    *  
    *  The navigation bar also maintain from this class
    */
-    [Activity(Label = "Home Organizer", ScreenOrientation = ScreenOrientation.Landscape, Theme = "@style/BlueTheme"
+    [Activity(Label = "Home Organizer"/*, ScreenOrientation = ScreenOrientation.Landscape*/, Theme = "@style/BlueTheme"
         /*, MainLauncher = true*/, Icon = "@drawable/icon")]
     public class MainActivity : AppCompatActivity
     {
-        DrawerLayout drawerLayout;
-        NavigationView navigationView;
+       public DrawerLayout drawerLayout;
+       public NavigationView navigationView;
         private SupportFragment mCurrentFragment;
         private ActionBarDrawerToggle mDrawerToggle;
         private Stack<SupportFragment> mStackFragments;
         private HomeFragment homeFragment;
         private SettingsFragment settingsFragment;
         private RegistrationFragment registrationFragment;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -45,8 +46,14 @@ namespace Home_Organizer
             SetContentView(Resource.Layout.Main);
             //  SQLiteClientBase<GlobalOption> globalOption = new SQLiteClientBase<GlobalOption>();
 
-            ThemeUtill.onActivityCreateSetTheme(this);
+
+          //  var root = FindViewById<LinearLayout>(Resource.Id.ll_main_layout);
+          
+            /**
+             Intial view */
             InitView();
+
+          
             navigationView.NavigationItemSelected += OnNavigationItemSelected;
 
             homeFragment = new HomeFragment(this);
@@ -60,7 +67,17 @@ namespace Home_Organizer
 
             mCurrentFragment = homeFragment;
 
+            /**
+         * get the theme 
+         */
+        
+        
+
+
         }
+
+   
+
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -100,6 +117,9 @@ namespace Home_Organizer
             trans.Commit();
             mCurrentFragment = fragment;
         }
+        /**
+         *  setup the menu action 
+       */
 
         private void OnNavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
@@ -109,25 +129,27 @@ namespace Home_Organizer
 
             drawerLayout.CloseDrawers();
 
-            if (menuItem.ItemId == Resource.Id.nav_home)
+            switch (menuItem.ItemId)
             {
-                ReplaceFragment(homeFragment);
-            }
-            else if (menuItem.ItemId == Resource.Id.nav_settings)
-            {
-                ReplaceFragment(settingsFragment);
-            }
-            else if (menuItem.ItemId == Resource.Id.nav_registration)
-            {
-                ReplaceFragment(registrationFragment);
+                case Resource.Id.nav_home:
+                    ReplaceFragment(homeFragment);
+                    break;
+
+                case Resource.Id.nav_settings:
+                    ReplaceFragment(settingsFragment);
+                    break;
+
+                case Resource.Id.nav_registration:
+                    ReplaceFragment(registrationFragment);
+                    break;
+
+                case Resource.Id.nav_LogOut:
+                    Finish();
+                    StartActivity(typeof(LoginActivity));
+                    break;
             }
 
-            else if (menuItem.ItemId == Resource.Id.nav_LogOut)
-            {
-                Finish();
-                StartActivity(typeof(LoginActivity));
-            }
-
+           
 
 
         }

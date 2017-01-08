@@ -9,9 +9,12 @@ using Android.Content.Res;
 using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.Design.Widget;
+using Android.Support.V4.Content;
 using Android.Views;
 using Android.Widget;
 using Home_Organizer;
+using V7Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace HO.Apps.Droid.Code.Controller.Config
 {
@@ -31,16 +34,7 @@ namespace HO.Apps.Droid.Code.Controller.Config
 
             cTheme = theme;
 
-          //  activity.Finish();
 
-         //   var cs = activity.LocalClassName;
-           // dynamic v2 = activity.GetType().GetProperty("Value").GetValue(activity, null);
-        
-            //   activity.StartActivity(new Intent(activity, typeof(activi)));
-            //            activity.StartActivity(new Intent(activity, typeof(activity.Class.ClassLoader)));
-            //   activity.startActivity(new Intent(activity, activity.Class.ClassLoader.getClass()));
-
-//            value = Convert.ChangeType(method.Invoke(null, new[] { value }), paramType);
             Intent refresh = new Intent(activity, typeof(MainActivity));
             refresh.AddFlags(ActivityFlags.NoAnimation);
             activity.Finish();
@@ -49,10 +43,11 @@ namespace HO.Apps.Droid.Code.Controller.Config
 
         }
 
-        public static void onActivityCreateSetTheme(Activity activity)
+        public static Color  OnActivityCreateSetTheme(Activity activity)
 
         {
-
+                 V7Toolbar toolbar;
+        toolbar = activity.FindViewById<V7Toolbar>(Resource.Id.toolbar);
             switch (cTheme)
 
             {
@@ -60,12 +55,15 @@ namespace HO.Apps.Droid.Code.Controller.Config
                 default:
 
                 case BLACK:
+                   // Resource re=activity.Resource.Color.drak_blue_1
+//                    activity.SetTheme(Resource.Style.BlackTheme);
+                    toolbar.SetBackgroundColor(Color.Red);
+//                    llLinearLayout.SetBackgroundColor(Color.Black);
+//                    llLinearLayout.SetBackgroundColor(new Color(ContextCompat.GetColor(activity, Resource.Color.drak_blue_1)));
+//                    navigationView.SetBackgroundColor(new Color(ContextCompat.GetColor(activity, Resource.Color.irisBlue)));
+//  Color myColor = res.GetColor(Resource.Color.myColor);
+// navigationView.SetBackgroundColor(res.GetColor(Resource.Color.gray_53));
 
-                    activity.SetTheme(Resource.Style.BlackTheme);
-
-                    Bitmap bm = BitmapFactory.DecodeResource(Resources, Resource.Drawable.Icon);
-                    ActivityManager.TaskDescription taskDesc = new ActivityManager.TaskDescription("Listy", bm, Color.Rgb(24, 80, 130));
-                    SetTaskDescription(taskDesc);
 
                     break;
 
@@ -77,6 +75,36 @@ namespace HO.Apps.Droid.Code.Controller.Config
 
             }
 
+            toolbar.SetBackgroundColor(Color.Red);
+
+            return GetBackgroundColor(activity, cTheme);
+        }
+
+        public static Color GetBackgroundColor(Activity activity, int them)
+        {
+
+            Color c;
+
+            switch (cTheme)
+
+            {
+
+                default:
+
+                case BLACK:
+
+                    c = new Color(ContextCompat.GetColor(activity, Resource.Color.drak_blue_1));
+
+                    break;
+
+                case BLUE:
+
+                    c = new Color(ContextCompat.GetColor(activity, Resource.Color.drak_blue_1));
+
+                    break;
+
+            }
+            return c;
         }
     }
 }

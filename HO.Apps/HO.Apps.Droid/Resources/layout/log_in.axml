@@ -24,7 +24,7 @@
         android:textColorHint="#929BB4"
         android:textColor="@color/color_white"
         android:hint="Enter Your Promo Code Here"
-        android:background="@drawable/round_conner"
+        android:background="@drawable/blue_round_conner"
         android:id="@+id/promo_code"
         android:layout_centerVertical="true" />
     <ImageView

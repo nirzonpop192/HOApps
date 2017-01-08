@@ -195,9 +195,13 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\custom_toast.axml" />
-    <AndroidResource Include="Resources\layout\home_fragment.axml" />
+    <AndroidResource Include="Resources\layout\home_fragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\log_in.axml" />
-    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\Main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\setting_fragment.axml" />
     <AndroidResource Include="Resources\layout\splash_activity.axml" />
     <AndroidResource Include="Resources\layout\first_item.axml" />
@@ -208,6 +212,7 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout-land\registration_fragment.axml" />
     <AndroidResource Include="Resources\layout-land\log_in.axml" />
+    <AndroidResource Include="Resources\layout-land\home_fragment.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -293,7 +298,9 @@
     <AndroidResource Include="Resources\drawable\window_page_not_found_error_256.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values\Strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\menu.xml" />
@@ -329,6 +336,9 @@
     <AndroidResource Include="Resources\values-v21\styles.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\blue_round_conner.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
